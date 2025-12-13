@@ -1,0 +1,89 @@
+palette = "dark"
+
+format = """
+[ 󰀵 ](bg:bg0)\
+[](bg:bg1 fg:bg0)\
+$directory\
+[](bg:bg2 fg:bg1)\
+$git_branch\
+$git_status\
+[ ](fg:bg2)\
+"""
+
+right_format = """
+$python\
+$nodejs\
+$aws\
+$azure\
+$golang\
+$kubernetes\
+[](fg:bg0)\
+$time
+"""
+
+add_newline = true
+
+[directory]
+style = "fg:#e3e5e5 bg:bg1"
+format = "[ $path ]($style)"
+truncate_to_repo = false
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:bg2"
+format = '[[ on $symbol $branch ](bg:bg2)]($style)'
+
+[git_status]
+style = "bg:bg2"
+ahead = "($count)⇡"
+behind = "($count)⇣"
+staged = "($count)+"
+untracked = "($count)?"
+modified = "($count)!"
+deleted = "($count)"
+format = '[[($all_status$ahead_behind )](bg:bg2)]($style)'
+
+[python]
+symbol = "[ ](fg:#3673a5)"
+style = "fg:#ffd342 bold"
+format = "[${symbol}${pyenv_prefix}(${version} )(($virtualenv) )]($style)"
+
+[nodejs]
+symbol = "[ ](fg:#81bd00)"
+format = "[$symbol[($version )](fg:#81bd00 bold)]($style)"
+
+[aws]
+symbol = '󰸏 '
+style = 'fg:#ff9900 bold'
+format = '[$symbol($profile )(\($region\) )]($style)'
+disabled = true
+
+[azure]
+disabled = true
+symbol = ' '
+style = 'fg:#0089d6 bold'
+format = '[$symbol($subscription)]($style) '
+
+[golang]
+symbol = ' '
+style = 'fg:#00add8 bold'
+format = '[$symbol($version )]($style)'
+
+[kubernetes]
+disabled = false
+symbol = "󱃾 "
+style = "fg:#326CE5 bold"
+format = "[$symbol$cluster( in ($namespace))]($style) "
+
+[time]
+disabled = false
+time_format = "%H:%M:%S" # Hour:Minute:Seconds Format
+style = "bg:bg1"
+format = '[[   $time ](bg:bg0)]($style)'
+
+[palettes.dark]
+bg0 = "#222831"
+bg1 = "#393E46"
+bg2 = "#00ADB5"

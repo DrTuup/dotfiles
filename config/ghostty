@@ -1,0 +1,26 @@
+# Window styling
+background = black
+window-padding-x = 4
+window-padding-y = 4
+macos-icon = xray
+
+# Font styling
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 13
+
+# Cursor and mouse settings
+cursor-style = block
+cursor-style-blink = true
+shell-integration-features = no-cursor
+mouse-hide-while-typing = true
+click-repeat-interval = 500
+
+# Functional
+copy-on-select = clipboard
+shell-integration = detect
+working-directory = home
+window-inherit-working-directory = false
+
+# Keybinds
+# For natural text editing
+keybind = cmd+backspace=esc:w
