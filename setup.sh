@@ -39,6 +39,6 @@ source "$DOTFILES_DIR/scripts/macos.sh"
 # Install applications from Brewfile
 source "$DOTFILES_DIR/scripts/applications.sh"
 # Create symlinks for application configuration
-source "$DOTFILES_DIR/scripts/symlinks.sh"
+source "$DOTFILES_DIR/scripts/symlink.sh"
 
 echo "Setup script completed!"
