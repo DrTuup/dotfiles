@@ -42,6 +42,8 @@ brew "ripgrep"
 brew "opencode"
 # CLI proxy to minimize LLM token consumption
 brew "rtk"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Cross-shell prompt for astronauts
 brew "starship"
 # OpenTofu / Terraform / Terragrunt / Terramate / Atmos version manager
