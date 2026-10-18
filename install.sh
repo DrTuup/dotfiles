@@ -105,17 +105,12 @@ onepassword_step() {
   fi
 
   if ! op whoami >/dev/null 2>&1; then
-    [[ -t 0 ]] || die "1Password is not signed in. Sign in, or run this script interactively."
+    [[ -t 0 ]] || die "1Password CLI is not signed in. Run this script interactively, or run 'eval \"\$(op signin)\"' first."
 
-    cat <<'MSG'
-
-Open the 1Password app and sign in. Then enable:
-  Settings -> Developer -> Integrate with 1Password CLI
-
-MSG
-    read -r -p "Press Enter once 1Password is signed in... " _
+    log "1Password CLI is not signed in; running 'op signin' for this session"
+    eval "$(op signin)" || die "'op signin' failed."
     op whoami >/dev/null 2>&1 \
-      || die "'op whoami' still fails. Check the 1Password app and the CLI integration setting."
+      || die "'op whoami' still fails after 'op signin'."
   fi
 
   op read "$OP_SECRET_REF" >/dev/null \
