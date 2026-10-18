@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+.Trash/
+*.bak-*
+
+# zsh
+.zcompdump*
+.zsh_history
+.zsh_sessions/
+
+# Local secrets and overrides (never commit)
+.secrets*
+*.local
