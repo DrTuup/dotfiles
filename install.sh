@@ -30,6 +30,8 @@ DO_CLEANUP=0
 LINKS=(
   "config/.gitconfig|$HOME/.gitconfig"
   "config/.zshrc|$HOME/.zshrc"
+  "config/tmux.conf|$HOME/.tmux.conf"
+  "config/nvim|$HOME/.config/nvim"
   "config/ghostty|$HOME/.config/ghostty/config"
   "config/starship.toml|$HOME/.config/starship.toml"
   "Brewfile|$HOME/Brewfile"
