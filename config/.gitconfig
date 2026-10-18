@@ -1,7 +1,7 @@
 [user]
 	email = 78033666+DrTuup@users.noreply.github.com
 	name = Ruben Claessens
-  	signingkey = ~/.ssh/github_ed25519.pub
+  signingkey = ~/.ssh/github_ed25519.pub
 [gpg]
   format = ssh
 [commit]
