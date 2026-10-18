@@ -2,10 +2,7 @@
 # Close any open System Preferences panes, to prevent them from overriding settings we’re about to change
 echo "Setting MacOS preferences..."
 
-osascript -e 'tell application "System Preferences" to quit'
-
-# Disable startup sound
-sudo nvram SystemAudioVolume=" "
+osascript -e 'tell application "System Settings" to quit' 2>/dev/null || true
 # Dock
 defaults write com.apple.dock "autohide" -bool "false"
 defaults write com.apple.dock "tilesize" -int "36"
