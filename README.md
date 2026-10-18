@@ -15,7 +15,7 @@ config/        config files that get symlinked into $HOME
 1. Install the Command Line Tools: `xcode-select --install`
 2. Clone the repo to `~/repos/dotfiles`:
    ```sh
-   git clone git@github.com:DrTuup/dotfiles.git ~/repos/dotfiles
+   git clone https://github.com/DrTuup/dotfiles.git ~/repos/dotfiles
    cd ~/repos/dotfiles
    ```
 3. Run the installer:
